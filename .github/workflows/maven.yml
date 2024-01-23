@@ -33,7 +33,7 @@ jobs:
       run: docker-compose -f "docker-compose.yml" up -d --build
       
     - name: Build with Maven
-      run: mvn -B clean test site
+      run: mvn -B clean package
 
     # generates coverage-report.md and publishes as checkrun
     - name: JaCoCo Code Coverage Report
